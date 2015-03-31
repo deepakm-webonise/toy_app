@@ -11,8 +11,9 @@ DeviceMesh is a mobile app where a group of users can create a video mesh on the
 
 ### Getting Started
 
-1. Install **mysql** kindly refer [this](https://help.ubuntu.com/12.04/serverguide/mysql.html) link.
+1. Requires Ruby 1.9.3
 
+2. Requires **mysql** kindly refer [this](https://help.ubuntu.com/12.04/serverguide/mysql.html) link for installation procedure. 
 
 
 ### Setup
@@ -41,3 +42,13 @@ DeviceMesh is a mobile app where a group of users can create a video mesh on the
 
    rails s              # Start the server
    ```
+
+### API List
+
+| Method |         Url        |                    Usage                               |
+|--------|--------------------|--------------------------------------------------------|
+| GET    | /macpi/login       | Authenticate user and save their information.          |
+| GET    | /macpi/create_mesh | Allows authenticated user to create a mesh.            |
+| GET    | /macpi/fetch_mesh  | Fetch list of all meshes.                              |
+| GET    | /macpi/join_mesh   | Allows authenticated user to join already created mesh |
+| GET    | /macpi/pattern     | Fetch the mesh pattern.                                |
