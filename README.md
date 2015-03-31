@@ -6,6 +6,7 @@ DeviceMesh is a mobile app where a group of users can create a video mesh on the
 1. VideoMesh- In this the group of users will mesh together their devices to form one single video mesh. The video which is played is split up across the various devices in the group to make one single video mesh.
 
 2. FlashMesh- Another feature of the app is the creation of patterns from the flashlights of the devices. The users can create a dynamic pattern of the flashlights of the devices.
+
 ====
 
 ### Getting Started
@@ -31,11 +32,12 @@ DeviceMesh is a mobile app where a group of users can create a video mesh on the
    ```
 
 5. Run the following commands:-
+   ```
+   cd /root/to/application
 
-    cd /root/to/application
+   bundle install       # Install the necessary gems
 
-    bundle install       # Install the necessary gems
+   rake db:setup        # Create the db, create the schema and load seed data.
 
-    rake db:setup        # Create the db, create the schema and load seed data.
-
-    rails s              # Start the server
+   rails s              # Start the server
+   ```
