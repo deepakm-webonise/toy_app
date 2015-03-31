@@ -10,7 +10,6 @@ DeviceMesh is a mobile app where a group of users can create a video mesh on the
 
 * Install mysql kindly refer [this](https://help.ubuntu.com/12.04/serverguide/mysql.html) link
 
-
 ----
 
 === Setup
