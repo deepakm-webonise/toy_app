@@ -49,9 +49,9 @@ DeviceMesh is a mobile app where a group of users can create a mesh on their mob
 |--------|--------------------|--------------------------------------------------------|
 | POST   | /macpi/login       | Authenticate user and save their information.          |
 | POST   | /macpi/create_mesh | Allows authenticated user to create a mesh.            |
-| GET    | /macpi/fetch_mesh  | Fetch list of all meshes.                              |
-| GET    | /macpi/join_mesh   | Allows authenticated user to join already created mesh |
-| GET    | /macpi/pattern     | Fetch the mesh pattern.                                |
+| POST   | /macpi/fetch_mesh  | Fetch list of all meshes.                              |
+| POST   | /macpi/join_mesh   | Allows authenticated user to join already created mesh |
+| POST   | /macpi/pattern     | Fetch the mesh pattern.                                |
 
 ### login
 
@@ -141,3 +141,105 @@ Parameters: {
   signed_key: '75f38b08f5291e885ce7d441613c3f08e3e61fd2' }
 ```
 
+### pattern 
+
+Display mesh pattern
+
+| Request Parameters |  Type   |
+|--------------------|---------|
+| id                 | Integer |
+| signed_key         | String  |
+
+* Example:
+```ruby
+Parameters: {
+  id: 68, 
+  signed_key: '05e97337bbf80ce4fed001a8a68038ca8a312e11' }
+```
+
+### list_mesh
+
+Display user mesh list
+
+| Request Parameters |  Type   |
+|--------------------|---------|
+| device_token       | String  |
+
+* Example:
+```ruby
+Parameters: {
+  device_token: 'APA91bHFeSpfTY2vw3Urrw43ArG-opcEFqvu0WCoV6z_WwV9ovNUvwPtUulbHoaZNPjf-GiJGTAue7JtU3VsfpyQWmpVZkwyZqI7IwPSkZsb9r-fIGNfOQyJFUR1NOU7Yx0hPJhLxzTaV86tw-LqjoPWv40OY1tcAA' }
+```
+
+### join_mesh
+
+* Method: POST
+
+| Request Parameters |  Type   |
+|--------------------|---------|
+| id                 | Integer |
+| uuid               | String  |
+| device_type        | String  |
+| signed_key         | String  |
+
+* Example:
+```ruby
+Parameters: {
+  id: 35,
+  uuid: '909171549134433', 
+  device_type: 'android',
+  signed_key: 'f85af4570403b8961d5a5acfe8a60b10f9c54407' }
+```
+
+### fetch_mesh
+
+Display list of all created mesh near user's area (Range- 100 meter).
+
+| Request Parameters |  Type   |
+|--------------------|---------|
+| uuid               | String  |
+| latitude           | Float   |
+| longitude          | Float   |
+| signed_key         | String  |
+
+* Example:
+```ruby
+Parameters: {
+  uuid: '909171549134433', 
+  latitude: 18.5109569,
+  longitude: 73.7773981, 
+  signed_key: '75f38b08f5291e885ce7d441613c3f08e3e61fd2' }
+```
+
+### play_time
+
+* Master
+
+Set the play time of mesh
+
+| Request Parameters |  Type   |
+|--------------------|---------|
+| mesh_id            | Integer |
+| duration           | string  |
+
+* Example:
+```ruby
+Parameters: {
+  mesh_id: 35, 
+  duration: 1851095694563 }
+```
+
+
+* Slave
+
+Get the play_time of mesh
+
+| Request Parameters |  Type   |
+|--------------------|---------|
+| id            | Integer |
+
+* Example:
+```ruby
+Parameters: {
+  id: 35 }
+``
