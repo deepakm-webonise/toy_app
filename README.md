@@ -69,13 +69,13 @@ DeviceMesh is a mobile app where a group of users can create a mesh on their mob
 * Example:
 ```ruby
 Parameters: {
-             "device_type"=>"android",
-             "first_name"=>"Deepak",
-             "height"=>"872", 
-             "last_name"=>"Mahakale", 
-             "token"=>"APA91bHFeSpfTY2vw3Urrw43ArG-opcEFqvu0WCoV6z_WwV9ovNUvwPtUulbHoaZNPjf-GiJGTAue7JtU3VsfpyQWmpVZkwyZqI7IwPSkZsb9r-fIGNfOQyJFUR1NOU7Yx0hPJhLxzTaV86tw-LqjoPWv40OY1tcAA", 
-             "uuid"=>"909171549134433", 
-             "width"=>"480", 
-             "signed_key"=>"f85af4570403b8961d5a5acfe8a60b10f9c54407"
+             token: "APA91bHFeSpfTY2vw3Urrw43ArG-opcEFqvu0WCoV6z_WwV9ovNUvwPtUulbHoaZNPjf-GiJGTAue7JtU3VsfpyQWmpVZkwyZqI7IwPSkZsb9r-fIGNfOQyJFUR1NOU7Yx0hPJhLxzTaV86tw-LqjoPWv40OY1tcAA", 
+             first_name: "Deepak",
+             last_name: "Mahakale", 
+             uuid: "909171549134433", 
+             device_type: "android",
+             width: 480, 
+             height: 872, 
+             signed_key: "f85af4570403b8961d5a5acfe8a60b10f9c54407"
              }
 ```
