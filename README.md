@@ -83,4 +83,61 @@ Parameters: {
   signed_key: 'f85af4570403b8961d5a5acfe8a60b10f9c54407' }
 ```
 
+### create_mesh
+
+Allows authenticated user to create a mesh.
+
+* Method: POST
+
+* Video Mesh
+
+| Request Parameters |  Type   |
+|--------------------|---------|
+| mesh_name          | String  |
+| mesh_type          | String  |
+| url                | String  |
+| video_width        | String  |
+| video_height       | String  |
+| uuid               | String  |
+| latitude           | Float   |
+| longitude          | Float   |
+| signed_key         | String  |
+
+* Example:
+```ruby
+Parameters: {
+  mesh_name: 'Test', 
+  mesh_type: 'video'
+  url: 'http://www.youtube.com/watch?v=5UvgL4P9q_M', 
+  video_height: '320', 
+  video_width: '640', 
+  uuid: '909171549134433', 
+  latitude: 18.5109569,
+  longitude: 73.7773981, 
+  signed_key: '75f38b08f5291e885ce7d441613c3f08e3e61fd2' }
+```
+
+* Video Mesh
+
+| Request Parameters |  Type   |
+|--------------------|---------|
+| mesh_name          | String  |
+| mesh_type          | String  |
+| pattern_id         | Integer |
+| uuid               | String  |
+| latitude           | Float   |
+| longitude          | Float   |
+| signed_key         | String  |
+
+* Example:
+```ruby
+Parameters: {
+  mesh_name: 'Test', 
+  mesh_type: 'video'
+  pattern_id: 1, 
+  uuid: '909171549134433', 
+  latitude: 18.5109569,
+  longitude: 73.7773981, 
+  signed_key: '75f38b08f5291e885ce7d441613c3f08e3e61fd2' }
+```
 
