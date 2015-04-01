@@ -1,13 +1,4 @@
 
-=== API List
-
- Method          Url                            Usage                               
- GET     /macpi/login        Authenticate user and save their information.          
- GET     /macpi/create_mesh  Allows authenticated user to create a mesh.            
- GET     /macpi/fetch_mesh   Fetch list of all meshes.                              
- GET     /macpi/join_mesh    Allows authenticated user to join already created mesh 
- GET     /macpi/pattern      Fetch the mesh pattern.                                
-
 == README
 
 This README would normally document whatever steps are necessary to get the

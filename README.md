@@ -1,7 +1,7 @@
 Device Mesh
 ===========
 
-DeviceMesh is a mobile app where a group of users can create a video mesh on their mobile devices. 
+DeviceMesh is a mobile app where a group of users can create a mesh on their mobile devices. 
 
 1. VideoMesh- In this the group of users will mesh together their devices to form one single video mesh. The video which is played is split up across the various devices in the group to make one single video mesh.
 
@@ -47,8 +47,26 @@ DeviceMesh is a mobile app where a group of users can create a video mesh on the
 
 | Method |         Url        |                    Usage                               |
 |--------|--------------------|--------------------------------------------------------|
-| GET    | /macpi/login       | Authenticate user and save their information.          |
-| GET    | /macpi/create_mesh | Allows authenticated user to create a mesh.            |
+| POST   | /macpi/login       | Authenticate user and save their information.          |
+| POST   | /macpi/create_mesh | Allows authenticated user to create a mesh.            |
 | GET    | /macpi/fetch_mesh  | Fetch list of all meshes.                              |
 | GET    | /macpi/join_mesh   | Allows authenticated user to join already created mesh |
 | GET    | /macpi/pattern     | Fetch the mesh pattern.                                |
+
+### login
+
+| Request Parameters |  Type   |
+|--------------------|---------|
+| device_token       | String  |
+| first_name         | String  |
+| last_name          | String  |
+| uuid               | String  |
+| device_type        | String  |
+| width              | Integer |
+| height             | Integer |
+| signed_key         | String  |
+
+* Example:
+```ruby
+Parameters: {"device_type"=>"android", "first_name"=>"Deepak", "height"=>"872", "last_name"=>"Mahakale", "token"=>"APA91bHFeSpfTY2vw3Urrw43ArG-opcEFqvu0WCoV6z_WwV9ovNUvwPtUulbHoaZNPjf-GiJGTAue7JtU3VsfpyQWmpVZkwyZqI7IwPSkZsb9r-fIGNfOQyJFUR1NOU7Yx0hPJhLxzTaV86tw-LqjoPWv40OY1tcAA", "uuid"=>"909171549134433", "width"=>"480", "signed_key"=>"f85af4570403b8961d5a5acfe8a60b10f9c54407"}
+```
